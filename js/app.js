@@ -18,11 +18,12 @@ class Enemy {
       this.speed = 100 + Math.floor(Math.random() * 200);
     }
     // check if enemy hits player
+    // if enemy hits player, reset player position
     if (
-      player.x < this.x + 40 &&
       player.x + 40 > this.x &&
-      player.y < this.y + 40 &&
-      40 + player.y > this.y
+      player.x < this.x + 40 &&
+      40 + player.y > this.y &&
+      player.y < this.y + 40
     ) {
       player.x = 200;
       player.y = 400;
